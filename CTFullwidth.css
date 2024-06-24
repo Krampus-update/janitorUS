@@ -4,6 +4,7 @@
 @version        1.0.0
 @description    the aims of this userstyle is to add things to Janitor's chat, for now you can just change chat color, but i trying to implement custom themes, presets and much more.
 @author         Krampus
+@updateURL      https://github.com/Krampus-update/janitorUS/blob/main/CTFullwidth.css
 
 @var color playerColor "What color do you want to use?" #fff0 
 @var color playerBG "What color do you want to use?" #fff0
