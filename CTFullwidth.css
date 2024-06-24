@@ -1,0 +1,74 @@
+	/* ==UserStyle==
+@name           Chat Tweaks - full width version
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    the aims of this userstyle is to add things to Janitor's chat, for now you can just change chat color, but i trying to implement custom themes, presets and much more.
+@author         Krampus
+
+@var color playerColor "What color do you want to use?" #fff0 
+@var color playerBG "What color do you want to use?" #fff0
+@var color botColor "What color should the bot use?" #fff0
+@var color botBG "What color should the bot use?" #fff0
+==/UserStyle== */
+	
+@-moz-document url-prefix("https://janitorai.com/chats/") {
+		body {
+			--chat-padding: 2px;
+			--chat-round: 15px;
+		}
+
+		.css-1ciw5tz {
+			max-width: none;
+		}
+		.css-1sla4fc {
+			max-width: none;
+		}
+		.css-if548y {
+			max-width: none;
+			width: 100%;
+		}
+
+		#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:not(:has([alt="Character Icon"])) {
+			margin-top: 5px;
+			padding: var(--chat-padding);
+			background: var(--playerColor);
+			border-radius: var(--chat-round)
+		}
+
+
+		#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:not(:has([alt="Character Icon"])) > li > div > div > div:nth-child(2) {
+			background: var(--playerBG);
+			border-radius: var(--chat-round);
+			padding: 10px;
+			margin-bottom:2px;
+		}
+
+		#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:not(:has([alt="Character Icon"])) > li > div > div > div:nth-child(1) > div {
+			background: var(--playerBG);
+			border-radius: var(--chat-round);
+			padding: 7px;
+			margin-bottom: 2px;
+		}
+
+		#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:has([alt="Character Icon"]) {
+
+			margin-top: 5px;
+			padding: var(--chat-padding);
+			background: var(--botColor);
+			border-radius: var(--chat-round);
+		}
+
+
+		#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:has([alt="Character Icon"]) > li > div > div > div:nth-child(2) {
+			background: var(--botBG);
+			border-radius: var(--chat-round);
+			padding: 5px;
+		}
+
+		#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:has([alt="Character Icon"]) > li > div > div > div:nth-child(1) > div {
+			background: var(--botBG);
+			border-radius: var(--chat-round);
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+	}
