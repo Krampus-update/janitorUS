@@ -1,0 +1,98 @@
+/* ==UserStyle==
+@name           Chat Tweaks - normal version
+@namespace      https://github.com/Krampus-update/janitorUS/
+@version        1.0.0
+@description    the aims of this userstyle is to add things to Janitor's chat, for now you can just change chat color, trying to implement custom themes, presets and much more.
+@author         Krampus <pedro_br14@hotmail.com> (linktr.ee/umKrampus)
+@homepageURL    https://github.com/Krampus-update/janitorUS/
+@updateURL      https://github.com/Krampus-update/janitorUS/blob/main/CT.css
+@supportURL     https://github.com/Krampus-update/janitorUS/issues
+
+@var color playerColor "What color do you want to use?" #fff0 
+@var color playerBG "What color do you want to use?" #fff0
+@var color botColor "What color should the bot use?" #fff0
+@var color botBG "What color should the bot use?" #fff0
+==/UserStyle== */
+@-moz-document url-prefix("https://janitorai.com/chats/") {/**/
+	body {
+		--chat-padding: 2px;
+		--chat-round: 15px;
+		--text-padding: 10px;
+		--name-padding: 7px;
+	}
+/*↓FULL WIDTH MODE, DELETE THIS IF YOU DONT LIKE↓*/
+	.css-1ciw5tz {
+		max-width: none;
+	}
+	.css-1sla4fc {
+		max-width: none;
+	}
+	.css-if548y {
+		max-width: none;
+		width: 100%;
+	}
+/*↑FULL WIDTH MODE, DELETE THIS IF YOU DONT LIKE↑*/
+	
+/*USER PART // USER PART // USER PART // USER PART // USER PART // USER PART*/
+	/*User Background*/
+	#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:not(:has([alt="Character Icon"])) {
+		margin-top: 5px;
+		padding: var(--chat-padding);
+		background: var(--playerColor);
+		border-radius: var(--chat-round)
+	}
+	/*User Persona Name*/
+	#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:not(:has([alt="Character Icon"])) > li > div > div > div:nth-child(1) > div {
+		background: var(--playerBG);
+		border-radius: var(--chat-round);
+		padding: var(--name-padding);
+		margin-bottom: 2px;
+	}
+	/*User Action*/
+	#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:not(:has([alt="Character Icon"])) > li > div > div > div:nth-child(2) {
+		background: var(--playerBG);
+		border-radius: var(--chat-round);
+		padding: var(--text-padding);
+	}
+	
+	
+/*BOT PART // BOT PART // BOT PART // BOT PART// BOT PART // BOT PART*/
+	/*Bot Background*/
+	#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:has([alt="Character Icon"]) {
+
+		margin-top: 5px;
+		padding: var(--chat-padding);
+		background: var(--botColor);
+		border-radius: var(--chat-round);
+	}
+	/*Bot Name*/
+	#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:has([alt="Character Icon"]) > li > div > div > div:nth-child(1) > div {
+		background: var(--botBG);
+		border-radius: var(--chat-round);
+		padding: var(--name-padding);
+		margin-bottom: 5px;
+	}
+	/*Bot Action*/
+	#root > div > div > div.css-4z774a > div > div > div > div:nth-child(2) > div:has([alt="Character Icon"]) > li > div > div > div:nth-child(2) {
+		background: var(--botBG);
+		border-radius: var(--chat-round);
+		padding: var(--text-padding);
+	}
+	
+/*BOT NEW/GENERATING MESSAGE THIS*/
+	/*Bot Name*/
+	.css-16u3s6f {
+		background: var(--botBG);
+		border-radius: var(--chat-round);
+		padding: var(--name-padding);
+		margin-bottom: 5px;
+	}
+	/*Bot Action*/
+	.css-10c6i1g {
+		background: var(--botBG);
+		border-radius: var(--chat-round);
+		padding: var(--text-padding);
+		margin-bottom: 5px;
+	}
+
+}
